@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const</title>
+</head>
+<body>
+<h1>Enter the radius of circle</h1>
+<input type="" id="text"> <br><br>
+<button id="btn"> calculte circumference</button>
+<h3>circumference of circle : </h3>
+<p id="cir"></p>  
+
+
+    <script>
+        // const :a variable that cannot be change once assign
+        // const a=24;
+        // console.log(a);
+        // a=26; this is no possible  beacuse it once is assigned to it.
+        
+        const PI=3.1425;
+        document.getElementById("btn").onclick=function()
+    {
+        const radius=document.getElementById("text").value;
+        const circumference=2*PI*radius;
+        document.getElementById("cir").textContent=circumference;
+
+    }
+    </script>
+</body>
+</html>
