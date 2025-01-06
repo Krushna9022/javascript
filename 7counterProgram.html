@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <title>counter</title>
     <style>
         
@@ -46,7 +48,7 @@
 </head>
 <body>
    <div class="container">
-
+        <h1 id="heart">❤️</h1>
         <h1 id="count">0</h1>
         <div>
             <Button id="btn1">increase</Button>
@@ -60,19 +62,34 @@
         // count=Number(count);
         document.getElementById("btn1").onclick=()=>
     {
+        
         count++;
         document.getElementById("count").textContent=count;
+        document.getElementById("heart").classList.remove("animate__animated","animate__heartBeat");
+        document.getElementById("heart").classList.remove("animate__animated","animate__flip");
+         void document.getElementById("heart").offsetWidth;
+        document.getElementById("heart").classList.add("animate__animated","animate__heartBeat");
+        
     }
     document.getElementById("btn2").onclick=()=>
     {
         count=0;
         document.getElementById("count").textContent=count;
+        document.getElementById("heart").classList.remove("animate__animated","animate__flip");
+         void document.getElementById("heart").offsetWidth;
+        document.getElementById("heart").classList.add("animate__animated","animate__flip");
     }
     document.getElementById("btn3").onclick=()=>
     {
         count--;
         document.getElementById("count").textContent=count;
+         document.getElementById("heart").classList.remove("animate__animated","animate__heartBeat");
+         document.getElementById("heart").classList.remove("animate__animated","animate__flip");
+         void document.getElementById("heart").offsetWidth;
+        document.getElementById("heart").classList.add("animate__animated","animate__heartBeat");
+       
     }
+   
     </script>
 </body>
 </html>
